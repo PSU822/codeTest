@@ -30,7 +30,7 @@ int fibo_dp_top(int x){
     memo[x] = fibo_dp_top(x - 1) + fibo_dp_top(x - 2);
 
     return memo[x];
-}
+}   // 재귀를 들어가고, 메모라이징하는 방식
 
 int fibo_dp_down(int x){
     dp[0] = 0; dp[1] = 1;
@@ -38,7 +38,7 @@ int fibo_dp_down(int x){
         dp[i] = dp[i-1] + dp[i-2];
     }
     return dp[x];
-}
+}   // 미리 x까지의 테이블을 만드는 방식
 
 int main(){
     cin >> n;
